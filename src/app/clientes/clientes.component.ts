@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Cliente } from '../cliente';
 
 @Component({
   selector: 'app-clientes',
@@ -6,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./clientes.component.css']
 })
 export class ClientesComponent implements OnInit {
+
+  cliente: Cliente = {
+    id: 1,
+    name: 'Oscar',
+    nif : 'P19929233',
+  };
 
   constructor() { }
 
