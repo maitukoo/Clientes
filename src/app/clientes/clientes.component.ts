@@ -22,4 +22,10 @@ export class ClientesComponent implements OnInit {
   ngOnInit() {
   }
 
+  selectedCliente: Cliente;
+
+onSelect(cliente: Cliente): void {
+  this.selectedCliente = cliente;
+}
+
 }
