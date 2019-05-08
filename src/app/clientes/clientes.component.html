@@ -1,4 +1,10 @@
-<h2>{{cliente.name | uppercase}} Details</h2>
+<h2>{{cliente.name | uppercase}}</h2>
 <div><span>id: </span>{{cliente.id}}</div>
 <div><span>name: </span>{{cliente.name}}</div>
 <div><span>nif: </span>{{cliente.nif}}</div>
+
+<div>
+  <label>name:
+    <input [(ngModel)]="cliente.name" placeholder="name"/>
+  </label>
+</div>
