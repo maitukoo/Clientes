@@ -1,5 +1,5 @@
 import { Cliente } from './cliente';
-export const HEROES: Cliente[] = [
+export const CLIENTES: Cliente[] = [
   { id: 11, name: 'Oscar' , nif: '23456789P' },
   { id: 12, name: 'Pepe' , nif: '23456789P' },
   { id: 13, name: 'Natxo' , nif: '23456789P' },  

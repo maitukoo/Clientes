@@ -8,3 +8,12 @@
     <input [(ngModel)]="cliente.name" placeholder="name"/>
   </label>
 </div>
+
+<h2>Mis Clientes</h2>
+<ul class="clientes">
+  <li *ngFor="let cliente of clientes">
+    <span class="badge">{{cliente.id}}</span> {{cliente.name}}
+  </li>
+</ul>
+
+
