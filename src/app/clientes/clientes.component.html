@@ -1,26 +1,23 @@
 <h2>Mis Clientes</h2>
 
 <table class="tablaClientes">
-  <tr>
-
-    <td>ID</td>
-
-    <td>Nombre</td>
-
-    <td>NIF</td>
-
-  </tr>
-
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>NIF</th>
+    </tr>
+  </thead>
+  <tbody>
     <tr *ngFor="let cliente of clientes" 
-    [class.selected]="cliente === selectedCliente"
+    [class.selected]="cliente === selectedCliente" 
     (click)="onSelect(cliente)">
       <td>{{cliente.id}}</td>
       <td>{{cliente.name}}</td>
       <td>{{cliente.nif}}</td>
     </tr>
+  </tbody>
 
 </table>
 
 <app-cliente-detalle [cliente]="selectedCliente"></app-cliente-detalle>
-
-
