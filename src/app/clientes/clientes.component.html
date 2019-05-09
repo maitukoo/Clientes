@@ -1,9 +1,5 @@
 <h2>Mis Clientes</h2>
 
-<ul>
-  <span>ID </span>Nombre NIF
-</ul>
-
 <table class="tablaClientes">
   <tr>
 
@@ -15,7 +11,6 @@
 
   </tr>
 
-  <!-- <ul class="clientes"> -->
     <tr *ngFor="let cliente of clientes" 
     [class.selected]="cliente === selectedCliente"
     (click)="onSelect(cliente)">
@@ -25,14 +20,6 @@
     </tr>
 
 </table>
-
-<!-- <ul class="clientes">
-  <li *ngFor="let cliente of clientes" 
-  [class.selected]="cliente === selectedCliente"
-  (click)="onSelect(cliente)">
-    <span class="badge">{{cliente.id}}</span> {{cliente.name}} {{cliente.nif}}
-  </li>
-</ul> -->
 
 <app-cliente-detalle [cliente]="selectedCliente"></app-cliente-detalle>
 
