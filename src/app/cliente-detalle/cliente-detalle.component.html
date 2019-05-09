@@ -1,3 +1,16 @@
-<p>
-  cliente-detalle works!
-</p>
+<div *ngIf="cliente">
+
+  <h2>{{cliente.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{cliente.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="cliente.name" placeholder="name"/>  
+    </label>
+  <br/>
+    <label>Nif:
+      <input [(ngModel)]='cliente.nif' placeholder="nif">
+    </label>
+    
+  </div>
+
+</div>

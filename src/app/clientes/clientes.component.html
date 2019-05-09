@@ -1,22 +1,39 @@
-<div *ngIf="selectedCliente">
-
-  <h2>{{selectedCliente.name | uppercase}} Details</h2>
-  <div><span>id: </span>{{selectedCliente.id}}</div>
-  <div>
-    <label>name:
-      <input [(ngModel)]="selectedCliente.name" placeholder="name"/>
-    </label>
-  </div>
-
-</div>
-
 <h2>Mis Clientes</h2>
-<ul class="clientes">
+
+<ul>
+  <span>ID </span>Nombre NIF
+</ul>
+
+<table class="tablaClientes">
+  <tr>
+
+    <td>ID</td>
+
+    <td>Nombre</td>
+
+    <td>NIF</td>
+
+  </tr>
+
+  <!-- <ul class="clientes"> -->
+    <tr *ngFor="let cliente of clientes" 
+    [class.selected]="cliente === selectedCliente"
+    (click)="onSelect(cliente)">
+      <td>{{cliente.id}}</td>
+      <td>{{cliente.name}}</td>
+      <td>{{cliente.nif}}</td>
+    </tr>
+
+</table>
+
+<!-- <ul class="clientes">
   <li *ngFor="let cliente of clientes" 
   [class.selected]="cliente === selectedCliente"
   (click)="onSelect(cliente)">
-    <span class="badge">{{cliente.id}}</span> {{cliente.name}}
+    <span class="badge">{{cliente.id}}</span> {{cliente.name}} {{cliente.nif}}
   </li>
-</ul>
+</ul> -->
+
+<app-cliente-detalle [cliente]="selectedCliente"></app-cliente-detalle>
 
 
