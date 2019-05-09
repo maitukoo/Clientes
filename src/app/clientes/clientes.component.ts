@@ -10,9 +10,7 @@ import { ClienteService } from '../cliente.service';
 })
 export class ClientesComponent implements OnInit {
 
-
   clientes: Cliente[];
-
 
   constructor(private clienteService: ClienteService) { }
 
@@ -27,7 +25,9 @@ export class ClientesComponent implements OnInit {
   }
 
   getClientes(): void {
-    this.clientes = this.clienteService.getClientes();
+    //this.clientes = this.clienteService.getClientes(); -- Antes de ser observable
+    this.clienteService.getClientes()
+      .subscribe(clientes => this.clientes = clientes);
   }
 
 }
